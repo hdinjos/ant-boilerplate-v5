@@ -39,17 +39,35 @@ const App: React.FC = () => {
           width: "100%",
         }}
       >
-        {React.createElement(
-          collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
-          {
-            className: "trigger",
-            onClick: () => setCollapsed(!collapsed),
-          }
-        )}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            padding: "0px 10px",
+          }}
+        >
+          <h2>Brand Name</h2>
+          <h2>Log Out</h2>
+        </div>
       </Header>
       <Layout>
         <Sider trigger={null} collapsible collapsed={collapsed}>
-          <div className="logo" />
+          <div
+            style={{
+              padding: "10px 5px",
+              display: "flex",
+              justifyContent: "center",
+              borderBottom: "1px solid white",
+            }}
+          >
+            {React.createElement(
+              collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
+              {
+                className: "trigger",
+                onClick: () => setCollapsed(!collapsed),
+              }
+            )}
+          </div>
           <Menu
             theme="dark"
             mode="inline"
@@ -64,6 +82,16 @@ const App: React.FC = () => {
                 key: "2",
                 icon: <VideoCameraOutlined />,
                 label: "nav 2",
+                children: [
+                  {
+                    key: "21",
+                    label: "Option 1",
+                  },
+                  {
+                    key: "22",
+                    label: "Option 2",
+                  },
+                ],
               },
               {
                 key: "3",
@@ -74,16 +102,21 @@ const App: React.FC = () => {
           />
         </Sider>
         <Content>
-          <div style={{ display: "flex", flexDirection: "column" }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              minHeight: "100%",
+              margin: 0,
+            }}
+          >
             <div
               style={{
-                background: colorBgContainer,
-                height: 100,
                 flex: 1,
                 margin: "24px 16px 0px 16px",
               }}
             >
-              <ListComp />
+              {/* <ListComp /> */}
               {/* This from router children */}
             </div>
             <Footer
