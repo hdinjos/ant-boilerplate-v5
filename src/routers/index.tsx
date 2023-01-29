@@ -13,6 +13,7 @@ const routers = createBrowserRouter([
       { index: true, element: <MenuOne /> },
       { path: "/menu1", element: <MenuOne /> },
       { path: "/menu2-1", element: <MenuSub1 /> },
+      { path: "/menu2-1/add", element: <MenuSub1 /> },
       { path: "/menu2-2", element: <MenuSub2 /> },
       { path: "/menu3", element: <MenuThree /> },
     ],
