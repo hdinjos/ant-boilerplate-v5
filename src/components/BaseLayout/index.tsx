@@ -89,6 +89,7 @@ const BaseLayout: React.FC = () => {
           top: 0,
           zIndex: 1,
           width: "100%",
+          boxShadow: "4px 4px 40px 0 rgba(0,0,0,.05)",
         }}
       >
         <div
@@ -98,12 +99,18 @@ const BaseLayout: React.FC = () => {
             padding: "0px 10px",
           }}
         >
-          <h2>Brand Name</h2>
-          <h2>Log Out</h2>
+          <div>Brand Name</div>
+          <div>Log Out</div>
         </div>
       </Header>
       <Layout>
-        <Sider trigger={null} collapsible collapsed={collapsed}>
+        <Sider
+          theme="light"
+          trigger={null}
+          collapsible
+          collapsed={collapsed}
+          width="256"
+        >
           <div
             style={{
               padding: "10px 5px",
@@ -121,13 +128,14 @@ const BaseLayout: React.FC = () => {
             )}
           </div>
           <Menu
-            theme="dark"
+            theme="light"
             mode="inline"
             openKeys={openSub}
             selectedKeys={[pathname]}
             items={items}
             onOpenChange={handleSubMenu}
             onSelect={handleSelectMenu}
+            // inlineIndent={24}
           />
         </Sider>
         <Content>

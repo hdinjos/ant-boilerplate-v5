@@ -16,3 +16,51 @@
   margin: 16px;
   background: rgba(255, 255, 255, 0.3);
 }
+
+/* menu */
+.ant-layout-sider-children .ant-menu-light .ant-menu-item-selected {
+  border-right: 2px solid #f4801a;
+}
+
+.ant-layout-sider-children .ant-menu .ant-menu-item {
+  border-radius: 0px;
+}
+
+.ant-layout-sider-children .ant-menu-inline .ant-menu-item {
+  margin-block: 8px;
+  margin-inline: 0px;
+  width: 100%;
+}
+
+.ant-layout-sider-children .ant-menu-inline .ant-menu-submenu {
+  margin-inline: 0px;
+}
+
+.ant-layout-sider-children .ant-menu-inline .ant-menu-submenu-title {
+  margin-block: 8px;
+  margin-inline: 0px;
+  width: 100%;
+}
+
+/* hover */
+
+.ant-layout-sider-children
+  .ant-menu-light:not(.ant-menu-horizontal)
+  .ant-menu-submenu-title:hover {
+  background-color: #fff;
+}
+
+.ant-layout-sider-children
+  .ant-menu-light
+  .ant-menu-submenu-title:hover:not(.ant-menu-item-selected):not(
+    .ant-menu-submenu-selected
+  ) {
+  color: #f4801a;
+}
+
+.ant-layout-sider-children
+  .ant-menu-light:not(.ant-menu-horizontal)
+  .ant-menu-item:not(.ant-menu-item-selected):hover {
+  background-color: transparent;
+  color: #f4801a;
+}
